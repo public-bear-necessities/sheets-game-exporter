@@ -1,0 +1,10 @@
+{
+  "dependencies": {
+    "@types/google-apps-script": "^1.0.76"
+  },
+  "scripts": 
+  {
+    "push": "cd src && clasp push && cd ..",
+    "init": "node npm_scripts/Initialize.js"
+  }
+}

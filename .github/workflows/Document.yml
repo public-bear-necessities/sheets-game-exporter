@@ -1,0 +1,40 @@
+name: Publish Package
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Document:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Main Repo
+        uses: actions/checkout@v3
+        with:
+          path: ./package
+
+      - name: Checkout Doxygen Awesome Repo
+        uses: actions/checkout@v3
+        with:
+          repository: jothepro/doxygen-awesome-css
+          path: ./doxygen-awesome-css
+      
+      - name: Get Repo Name
+        id: string
+        uses: ASzc/change-string-case-action@v2
+        with:
+          string: ${{ github.event.repository.name }}
+
+      - name: Build
+        uses: mattnotmitt/doxygen-action@v1.9.4
+        with:
+          doxyfile-path: documentation/Doxyfile
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_branch: gh-pages
+          publish_dir: ./out/html
+          full_commit_message: "Documetation for -> ${{ github.event.head_commit.message }}"

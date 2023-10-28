@@ -37,7 +37,7 @@ Navigate to the directory where you cloned the repository.
 
 Run the following command to initialize your project, replacing '[YOUR-SCRIPT-ID]' with the Script ID copied in the previous step:
 ```bash
-npm run init [YOUR-SCRIPT-ID]
+npm run init -- [YOUR-SCRIPT-ID]
 ```
 
 ### Step 7: Push the project

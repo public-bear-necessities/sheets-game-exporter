@@ -28,6 +28,8 @@ clasp login
 Open the Google Sheet you want to instal this extension to and copy the script ID.
 Open the Extneions menu and select "Apps Script". This will open the Apps Script editor.
 ![Extensions Menu](https://github.com/public-bear-necessities/sheets-game-exporter/blob/main/assets/Extensions%20Menu.png)
+
+Navigate to the Settings menu and you will find the Script ID.
 ![Apps Script Editor](https://github.com/public-bear-necessities/sheets-game-exporter/blob/main/assets/Script%20ID.png)
 
 ### Step 6: Initialize the project

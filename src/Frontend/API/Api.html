@@ -1,0 +1,11 @@
+<script>
+    function Run(Method, ...args) 
+    {
+        google.script.run.withSuccessHandler(Method).withFailureHandler(BackendError)[Method.name](args);
+    }
+
+    function BackendError(error) 
+    {
+        alert(error.message);
+    }
+</script>

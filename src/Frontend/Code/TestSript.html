@@ -1,16 +1,6 @@
 <script>
-    function Run(Method, ...args) 
-    {
-        google.script.run.withSuccessHandler(Method).withFailureHandler(BackendError)[Method.name](args);
-    }
-
-    function ShowBackendResponse(filename) 
+    function TestMethod(filename) 
     {
         alert(filename);
-    }
-
-    function BackendError(error) 
-    {
-        alert(error.message);
     }
 </script>
